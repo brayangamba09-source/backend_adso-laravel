@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-use MongoDB\Laravel\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model;
 
 class Aprendiz extends Model
 {
-    protected $connection = 'mongodb';
-    protected $collection = 'aprendices';
+    protected $connection = 'mysql';
+    protected $table = 'aprendices';
 
     protected $fillable = [
         'nombre',
