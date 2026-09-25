@@ -14,5 +14,10 @@ COPY . .
 RUN composer install --optimize-autoloader --no-dev
 RUN chown -R www-data:www-data /var/www && chmod -R 755 /var/www/storage
 
-EXPOSE 9000
-CMD ["php-fpm"]
+EXPOSE 10000
+
+CMD ["sh", "-c", "php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
+
+
+#EXPOSE 9000
+#CMD ["php-fpm"]
