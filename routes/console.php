@@ -1,8 +1,8 @@
-<?php
+   <?php
 
-use App\Http\Controllers\Api\AprendizController;
-use Illuminate\Support\Facades\Route;
+   use Illuminate\Foundation\Inspiring;
+   use Illuminate\Support\Facades\Artisan;
 
-Route::prefix('v1')->group(function () {
-    Route::apiResource('aprendiz', AprendizController::class);
-});
+   Artisan::command('inspire', function () {
+       $this->comment(Inspiring::quote());
+   })->purpose('Display an inspiring quote');
